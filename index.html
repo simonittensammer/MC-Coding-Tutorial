@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Learn coding with Minecraft!</title>
+    <link rel="stylesheet" type="text/css" href="css/lib/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="css/lib/material.css">
+    <link rel="stylesheet" type="text/css" href="css/lib/darcula.css">
+    <link rel="stylesheet" href="css/lib/show-hint.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div id="leftWrapper">
+        <div id="headerMenu">
+            <h1 class="headline">Minecraft Coding</h1>
+
+            <div id="buttons">
+            <div class="button" id="run">
+                <img src="img/run.png" alt="run">
+            </div>
+            <div class="button" id="download">
+                <img src="img/download.png" alt="download">
+            </div>
+        </div>
+        </div>
+        <textarea id="code">//Write your Code here...</textarea>
+    </div>
+
+    <div id="rightWrapper">
+        <div id="console">
+            <div id="consoleOutput">
+                
+            </div>
+        </div>
+
+        <div id="credits">
+
+        </div>
+    </div>
+
+    <!-- JS IMPORTS --><!-- Insert this line above script imports  -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/writeToFile.js"></script>
+    <script>
+        log("Lade Bibliotheken...", "n");
+    </script>
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/codemirror.js"></script>
+    <script type="text/javascript" src="js/lib/clike.js"></script>
+    <script type="text/javascript" src="js/lib/matchbrackets.js"></script>
+    <script type="text/javascript" src="js/lib/show-hint.js"></script>
+    <script type="text/javascript" src="js/lib/active-line.js"></script>
+
+    <script>
+            log("Initialisieren...", "n");
+    </script>
+    <script type="text/javascript" src="js/initializeCodemirror.js"></script>
+    <script>
+            log("Fertig initialisiert!", "s");
+    </script>
+  </body>
+</html>
+
+<!--
+int i = 0;
+
+if (i = 0) {
+	//code
+  	System.out.println("asdf");
+}
+-->

@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: consolas;
+    src: url(../font/consolas.TTF);
+}
+
+body {
+    background: #222222;
+    overflow: hidden;
+    font-family: consolas;
+    color: white;
+}
+
+#leftWrapper {
+    width: 70vw;
+    margin: 0 2.5vw;
+    height: 100vh;
+    float: left;
+}
+
+#rightWrapper {
+    width: 22.5vw;
+    margin: 0 2.5vw 0 0;
+    height: 100vh;
+    float: right;
+}
+
+#headerMenu {
+    height: 10vh;
+    margin: 2.5vh 0;
+
+    font-size: 3vh;
+    line-height: 10vh;
+    color: white;
+}
+
+.headline {
+    float: left;
+    height: 10vh;
+}
+
+#buttons {
+    float: right;
+    height: 10vh;
+}
+
+.button {
+    height: 10vh;
+    padding: 0 .5vw;
+    float: left;
+}
+
+.button img {
+    height: 8vh;
+    width: 8vh;
+    margin: 1vh;
+    filter: grayscale(1);
+
+    transition: all .15s ease-in-out
+}
+
+.button img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+.CodeMirror {
+    height: 80vh;
+    margin: 2.5vh 0;
+}
+
+#console {
+    height: 50vh;
+    width: 100%;
+    margin-top: 15vh;
+    line-height: 170%;
+    font-size: 75%;
+    background: #2b2b2b;
+}
+
+#consoleOutput {
+    width: 90%;
+    height: 90%;
+    padding: 5% 5%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    font-weight: lighter;
+}
+
+#consoleOutput::-webkit-scrollbar{
+    background: #313335;
+    width: 3%;
+}
+
+#consoleOutput::-webkit-scrollbar-thumb{
+    background: #2ECC71;
+}
+
+.msgNormal {
+    color: darkgoldenrod;
+}
+
+.msgSuccess {
+    color: green;
+}
+
+.msgError {
+    color: darkred;
+}
+
+#credits {
+    height: 27.5vh;
+    margin: 2.5vh 0;
+    width: 100%;
+    background: #2b2b2b;
+}
