@@ -1,4 +1,8 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow } = require('electron');
+const { shell } = require('electron');
+
+// Open a local file in the default app
+shell.openItem(app.getAppPath() + '/server/run.bat');
 
 // Behalten Sie eine globale Referenz auf das Fensterobjekt. 
 // Wenn Sie dies nicht tun, wird das Fenster automatisch geschlossen, 
@@ -16,7 +20,7 @@ function createWindow () {
     }
   })
 
-  // disable default menu
+  // Blende das Standart-Menü aus
   win.setMenu(null);
 
   // and load the index.html of the app.
