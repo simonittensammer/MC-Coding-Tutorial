@@ -8,6 +8,7 @@ var editor = CodeMirror.fromTextArea(code, {
         styleActiveLine: true,
         lineWrapping: true,
         matchBrackets: true,
+        autoCloseBrackets: true,
         extraKeys: {"Ctrl-Space": "autocomplete"}
 });
 //});
