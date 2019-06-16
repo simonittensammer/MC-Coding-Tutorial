@@ -19,18 +19,97 @@
             <div class="button" id="run">
                 <img src="img/run.png" alt="run">
             </div>
-            <div class="button" id="download">
-                <img src="img/download.png" alt="download">
+            <div class="button" id="tutorial">
+                <img src="img/tuto.png" alt="tutorial">
             </div>
+            <div class="button" id="help">
+                <img src="img/help.png" alt="help">
+            </div>
+
         </div>
         </div>
-        <textarea id="code">//Write your Code here...</textarea>
+        <div id="blurHelp">
+          <textarea id="code">//Write your Code here...</textarea>
+        </div>
+    </div>
+
+    <div id="tutoDiv">
+      <div id="l1" class="lesson first">
+        <p class="lessonTitle">
+          Lesson 1: Simple Loop
+        </p>
+        <br>
+        <div class="sytax">
+          for (statement 1; statement 2; statement 3) {
+            <br>
+            &nbsp //code block to be executed
+            <br>
+          }
+        </div>
+      </div>
+
+      <div id="l2" class="lesson">
+        <p class="lessonTitle">
+          Lesson 2: Encapsulated Loop
+        </p>
+        <br>
+        <div class="sytax">
+          for (statement 1; statement 2; statement 3) {
+            <br>
+            &nbsp //first code block to be executed
+            <br>
+            &nbsp for (statement 4; statement 5; statement 6) {
+              <br>
+               &nbsp &nbsp //second code block to be executed
+              <br>
+            &nbsp }
+            <br>
+          }
+        </div>
+      </div>
+
+      <div id="l3" class="lesson">
+        <p class="lessonTitle">
+          Lesson 3: If-Statement
+        </p>
+        <br>
+        <div class="sytax">
+          if (condition) {
+            <br>
+            &nbsp //block of code to be executed if the condition is true
+            <br>
+          }
+        </div>
+        <br>
+      </div>
+
+      <button type="button" id="btn" onclick="increment()" name="btn">Done</button>
+
+    </div>
+
+    <div id="helpDiv">
+      <p id="helpTitle">
+        Help
+      </p>
+      <div id="helpContent">
+        <p class="helpHead">Step 1</p>
+        Write your code in the provided textarea
+        <br><br>
+        <p class="helpHead">Step 2</p>
+        Click the RUN-Button on the top
+        <br><br>
+        <p class="helpHead">Step 3</p>
+        Type "/run" in the Minecraft-Chat
+        <br><br>
+        <p class="helpHead">Step 4</p>
+        See the magic happen...
+      </div>
     </div>
 
     <div id="rightWrapper">
         <div id="console">
             <div id="consoleOutput">
-                
+
             </div>
         </div>
 
@@ -41,7 +120,6 @@
 
     <!-- JS IMPORTS --><!-- Insert this line above script imports  -->
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/writeToFile.js"></script>
     <script>
         log("Lade Bibliotheken...", "n");
     </script>
