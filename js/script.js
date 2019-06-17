@@ -12,7 +12,17 @@ function writeCodeToFile() {
     const fs = require('fs')
 
     // Data which will write in a file.
-    let data = editor.getValue();
+    let data = `import java.util.logging.Logger;import org.bukkit.entity.Player;import org.bukkit.Location;import org.bukkit.Material;public class Code{private Logger logger;private Player player;private Location location;public Code(){}
+    public Code(Logger logger,Player player,Location location){this.logger=logger;this.player=player;this.location=location;}
+    public void run(){` +
+        editor.getValue() +
+        `}
+        private void sayHello(){logger.info("Hello "+player.getName());}
+        private void build(int x,int y,int z){Material material=Material.getMaterial("STONE");location.add(x,y,z).getBlock().setType(material);location.add(-x,-y,-z);}
+        private void build(int x,int y,int z,String materialString){Material material=Material.getMaterial(materialString.toUpperCase());location.add(x,y,z).getBlock().setType(material);location.add(-x,-y,-z);}
+        private void destroy(int x,int y,int z){Material material=Material.getMaterial("AIR");location.add(x,y,z).getBlock().setType(material);location.add(-x,-y,-z);}
+        private boolean check(int x,int y,int z){if(!location.add(x,y,z).getBlock().getType().name().equalsIgnoreCase("AIR")){location.add(-x,-y,-z);return true;}else{location.add(-x,-y,-z);return false;}}
+        private boolean check(int x,int y,int z,String materialString){if(location.add(x,y,z).getBlock().getType().name().equalsIgnoreCase(materialString)){location.add(-x,-y,-z);return true;}else{location.add(-x,-y,-z);return false;}}}`;
 
     // Write data in 'Output.txt' .
     fs.writeFile('output.txt', data, (err) => {
