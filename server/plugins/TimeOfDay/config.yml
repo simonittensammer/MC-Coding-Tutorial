@@ -1,0 +1,4 @@
+timeofday: day
+#custom
+start: 1000
+end: 10000
