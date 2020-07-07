@@ -6,7 +6,7 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^5.0.2",
+    "electron": "^9.1.0",
     "git": "^0.1.5"
   }
 }
